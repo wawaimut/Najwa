@@ -1,0 +1,271 @@
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swep");
+
+                        :root {
+                            --primary_color: rgb(217, 1, 225);
+                            --primary_color_dark: rgb(98, 1, 225);
+                            --text_dark: rgb(1, 161, 225);
+                            --text_light: rgb(1, 225, 120);
+                            --extra_light: rgb(161, 1, 225);
+                            --max_width: 1200px;
+                        }
+
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: 10;
+                        }
+
+                        .section_container {
+                            max-width: var(--max_width);
+                            margin: auto;
+                            padding: 5rem 1rem;
+                        }
+
+                        .section_header {
+                            font-size: 2rem;
+                            font-weight: 600;
+                            color: var(--text_dark);
+                            text-align: center;
+                        }
+
+                        img {
+                            width: 100%;
+                            display: flex;
+                        }
+
+                        body {
+                            background: linear-gradient(to right, #941875, #fff7fe);
+                        }
+
+                        nav {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 1rem;
+                            background-color: white;
+                            border-bottom: 2px solid var(--primary_color);
+                            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .nav_logo {
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                            color: var(--text_dark);
+                        }
+
+                        .nav_links {
+                            list-style: none;
+                            display: flex;
+                            gap: 2rem;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                      .nav_links a {
+                text-decoration: none;
+                color: var(--primary_color);
+                padding: 0.5rem 1rem;
+                position: relative;
+                transition: color 0.3s ease;
+            }
+
+            .nav_links a::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: var(--primary_color_dark);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: width 0.3s ease;
+            }
+
+            .nav_links a:hover {
+                color: var(--primary_color_dark);
+            }
+
+            .nav_links a:hover::after {
+                width: 100%;
+            }
+
+                        .header_container {
+                            padding: 1rem 1rem 5rem 1rem;
+                        }
+
+                        .header_image_container {
+                            position: relative;
+                            min-height: 500px;
+                            background-image: linear-gradient(
+                                    to right rgba(92, 111, 220, 0.664) rgba(220, 173, 92, 0.664)
+                                )
+                                url("foto tampilan.jpg");
+                            background-position: center center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            border-radius: 2rem;
+                        }
+
+                        .header_content {
+                            max-width: 600px;
+                            padding: 5rem 2 rem;
+                        }
+
+                        .header_content h1 {
+                            margin-bottom: 1rem;
+                            font-size: 3.5rem;
+                            line-height: 4rem;
+                            font-weight: 600;
+                            color: var(--white);
+                        }
+
+                        .header_content p {
+                            color: var(--extra_light);
+                        }
+
+                        .kerajaan_grid {
+                            margin-top: 4rem;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 2rem;
+                            max-width: var(--max_width);
+                            background: #fff7fe;
+                            margin: 5px;
+                        }
+
+                        .kerajaan_grid {
+                            padding: 100px;
+                            border-radius: 5%;
+                        }
+                        .kerajaan_grid a {
+                            text-decoration: none;
+                            color: black;
+                        }
+
+                        .kerajaan_kartu {
+                            overflow: hidden;
+                            border-radius: 1rem;
+                            box-shadow: 5px 5px 20px rgb(1, 161, 225);
+                            background: linear-gradient(to right, rgb(98, 1, 225) rgb(117, 1, 225));
+                            transition:
+                                transform 0.32s,
+                                0.3s;
+                        }
+
+                        .kerajaan_kartu:hover {
+                            background: linear-gradient(to left, rgb(225, 1, 105) rgb(225, 1, 206));
+                            transform: scale(1.05);
+                            box-shadow: 5px 5px 20px rgb(226, 241, 168);
+                        }
+
+                        .kerajaan_kartu_header {
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 1rem;
+                            margin-bottom: 6.5rem;
+                        }
+
+                        .kerajaan_artu_header h4 {
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            color: var(--text_dark);
+                        }
+
+                        .kerajaan_content p {
+                            color: var(--text_light);
+                        }
+
+                        .footer {
+                            background-color: bisque;
+                        }
+
+                        .footer_container {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 7rem;
+                        }
+
+                        .footer_col h4 {
+                            margin-bottom: 1rem;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            color: var(--text_dark);
+                        }
+                        .footer_col p {
+                            margin-bottom: 1rem;
+                            color: var(--text_light);
+                            cursor: pointer;
+                            transition: 0.3s;
+                        }
+                        .footer_col p:hover {
+                            color: var(--text_dark);
+                        }
+                        .footer_bar {
+                            position: relative;
+                            max-width: var(--max_width);
+                            margin: auto;
+                            padding: 1rem;
+                            font-size: 2rem;
+                            font-weight: 500;
+                            color: var(--primary_color_dark);
+                            text-align: center;
+                            overflow: hidden;
+                        }
+                        .image img {
+                            max-width: var(--max_width);
+                            min-height: 100px;
+                            position: relative;
+                            border-radius: 2rem;
+                        }
+                        .main_content {
+                            padding: 3rem;
+                        }
+
+                        .client {
+                            background-color: pink;
+                        }
+
+                        .client_grid {
+                            margin-top: 4rem;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                        .client_card {
+                            background-color: white;
+                            border-radius: 1rem;
+                        }
+
+                        .client_card img {
+                            border-radius: 10px;
+                        }
+
+                        .foto {
+                            background-color: rgb(15, 126, 223);
+                        }
+
+                        .foto_grid {
+                            margin-top: rem;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            max-width: var(--max_width); 
+                            margin: auto;
+                            min-width: 950px;
+                        }
+
+                        .foto_card {
+                            background-color: rgb(255, 196, 240);
+                            border-radius: 1rem;
+                        }
+
+                        .foto_card img {
+                            width: 190px;
+                            margin: auto;
+                            border-radius: 10%;
+                            background-position: center center;
+                            height: 220px;
+                        }
+
+                        .foto_card p {
+                            text-align: center;
+                            color: var(--white);
+                        }
